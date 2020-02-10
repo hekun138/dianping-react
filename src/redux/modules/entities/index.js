@@ -10,4 +10,6 @@ const rootReducer = combineReducers({
   shops,
   orders,
   comments
-})
+});
+
+export default rootReducer;

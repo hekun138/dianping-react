@@ -36,9 +36,9 @@ export const actions = {
 const fetchLike = endpoint => ({
   [FETCH_DATA]: {
     types: [
-      type.FETCH_LIKES_REQUEST,
-      type.FETCH_LIKES_SUCCESS,
-      type.FETCH_LIKES_FAILURE
+      types.FETCH_LIKES_REQUEST,
+      types.FETCH_LIKES_SUCCESS,
+      types.FETCH_LIKES_FAILURE
     ],
     endpoint,
     schema

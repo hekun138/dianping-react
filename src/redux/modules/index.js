@@ -10,4 +10,6 @@ export const rootReducer = combineReducers({
   home,
   detail,
   app
-})
+});
+
+export default rootReducer;
