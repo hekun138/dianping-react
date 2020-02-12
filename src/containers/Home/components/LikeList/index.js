@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { dataSource } from "./data";
 import LikeItem from "../LikeItem";
+import Loading from "../../../../components/Loading";
 import "./style.css";
 
 class LikeList extends Component {
@@ -62,7 +63,7 @@ class LikeList extends Component {
         <div className="likeList_header">猜你喜欢</div>
         <div className="likelist_list">
           {data.map((item, index) => {
-            return <LikeItem key={item.id} data={item} />;
+            return <LikeItem key={index} data={item} />;
           })}
         </div>
         {loadTimes < 3 ? (
