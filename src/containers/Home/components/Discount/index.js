@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { dataSource } from "./data";
 import "./style.css";
 
 class Discount extends Component {
   render() {
-    const data = dataSource;
+    const { data } = this.props;
     return (
       <div className="discount">
         <a className="discount_header">
@@ -15,7 +14,7 @@ class Discount extends Component {
         <div className="discount_content">
           {data.map((item, index) => {
             return (
-              <a key={item.id} className="discount_item" href={item.url}>
+              <a key={item.id} className="discount_item">
                 <div className="discount_itemPic">
                   <img width="100%" height="100%" src={item.picture} />
                 </div>

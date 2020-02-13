@@ -159,3 +159,22 @@ const reducer = combineReducers({
 });
 
 export default reducer;
+
+//selectors
+//获取猜你喜欢state
+export const getLikes = state => {
+  return state.home.likes.ids.map(id => {
+    return state.entities.products[id];
+  });
+};
+//获取特惠商品state
+export const getDiscounts = state => {
+  return state.home.discounts.ids.map(id => {
+    return state.entities.products[id];
+  });
+};
+
+//猜你喜欢当前分页码
+export const getPageCountOfLikes = state => {
+  return state.home.likes.pageCount;
+};
