@@ -50,7 +50,7 @@ class LikeList extends Component {
     return (
       <div ref={this.myRef} className="likeList">
         <div className="likeList_header">猜你喜欢</div>
-        <div className="likelist_list">
+        <div className="likeList_list">
           {data.map((item, index) => {
             return <LikeItem key={index} data={item} />;
           })}

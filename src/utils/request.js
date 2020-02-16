@@ -9,7 +9,7 @@ function get(url) {
     headers: headers
   })
     .then(response => {
-      handleResponse(url, response);
+      return handleResponse(url, response);
     })
     .catch(err => {
       console.error(`Request failed. url=${url}. Message=${err}`);
@@ -21,15 +21,15 @@ function get(url) {
 
 function post(url, data) {
   return fetch(url, {
-    method: "GET",
+    method: "POST",
     headers: headers,
     body: data
   })
     .then(response => {
-      handleResponse(url, response);
+      return handleResponse(url, response);
     })
-    .catch(err => {
-      console.error(`Request failed. url=${url}. Message=${err}`);
+    .catch(error => {
+      console.error(`Request failed. url=${url}. Message=${error}`);
       return Promise.reject({
         error: { message: "Request failed" }
       });

@@ -17,7 +17,7 @@ export default store => next => action => {
     throw new Error("必须指定领域实体的schema");
   }
   if (!Array.isArray(types) && types.length !== 3) {
-    throw new Error("需要指定一个包含了3个action types的数据");
+    throw new Error("需要指定一个包含了3个action type的数据");
   }
   if (!types.every(type => typeof type === "string")) {
     throw new Error("action type必须为字符串类型");

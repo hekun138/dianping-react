@@ -49,7 +49,7 @@ export const actions = {
         rowIndex,
         params.PAGE_SIZE_LIKES
       );
-      return dispatch(fetchLike(endpoint));
+      return dispatch(fetchLikes(endpoint));
     };
   },
   //加载特惠商品
@@ -78,7 +78,7 @@ export const actions = {
   // }
 };
 
-const fetchLike = endpoint => ({
+const fetchLikes = endpoint => ({
   [FETCH_DATA]: {
     types: [
       types.FETCH_LIKES_REQUEST,

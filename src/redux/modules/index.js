@@ -5,7 +5,7 @@ import detail from "./detail";
 import app from "./app";
 
 //合并成根reducer
-export const rootReducer = combineReducers({
+const rootReducer = combineReducers({
   entities,
   home,
   detail,
