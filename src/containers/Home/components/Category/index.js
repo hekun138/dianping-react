@@ -21,7 +21,7 @@ class Category extends Component {
                 {section.map((item, i) => {
                   return (
                     <div key={i} className="category_section">
-                      <img className="category_icon" src={item.src} />
+                      <img alt="" className="category_icon" src={item.src} />
                       <div>
                         <span className="category_text">{item.name}</span>
                       </div>

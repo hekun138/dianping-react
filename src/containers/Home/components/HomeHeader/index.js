@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 class HomeHeader extends Component {
@@ -6,11 +7,15 @@ class HomeHeader extends Component {
     return (
       <div className="homeHeader">
         <header className="homeHeader_wrapper">
-          <a className="homeHeader_city">北京</a>
-          <a className="homeHeader_search">输入商户名、地点</a>
-          <a className="homeHeader_self">
+          <Link to="/location" className="homeHeader_city">
+            北京
+          </Link>
+          <Link to="/search" className="homeHeader_search">
+            输入商户名、地点
+          </Link>
+          <Link to="/user" className="homeHeader_self">
             <div className="homeHeader_portrait"></div>
-          </a>
+          </Link>
         </header>
       </div>
     );
