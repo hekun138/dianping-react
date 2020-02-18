@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style.css";
 
 class ProductOverview extends Component {
   render() {
@@ -19,10 +20,21 @@ class ProductOverview extends Component {
             </div>
           </div>
         </div>
-        <div className="productOverview_purchase"></div>
-        <ul className="productOverview_remarkItem">
-          <li></li>
-          <li></li>
+        <div className="productOverview_purchase">
+          <span className="productOverview_symbol">￥</span>
+          <span className="productOverview_price">19.9</span>
+          <span className="productOverview_price-old">￥48</span>
+          <a className="productOverview_btn">立即购买</a>
+        </div>
+        <ul className="productOverview_remark">
+          <li className="productOverview_remarkItem">
+            <i className="productOverview_sign1"></i>
+            <span className="productOverview_desc">随时可退</span>
+          </li>
+          <li className="productOverview_remarkItem">
+            <i className="productOverview_sign2"></i>
+            <span className="productOverview_desc">过期自动退</span>
+          </li>
         </ul>
       </div>
     );
