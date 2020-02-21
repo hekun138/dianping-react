@@ -3,6 +3,9 @@ import "./style.css";
 
 class Detail extends Component {
   render() {
+    const {
+      detail: { category, products, remark, currentPrice, oldPrice }
+    } = this.props.data;
     return (
       <div className="detail">
         <div className="detail_header">
@@ -13,14 +16,18 @@ class Detail extends Component {
           <tbody>
             <tr className="detail_row">
               <th colSpan="3" className="detail_category">
-                饮品
+                {category}
               </th>
             </tr>
-            <tr className="detail_row">
-              <td>百果香（冷饮）</td>
-              <td className="detail_row-alignRight">1扎</td>
-              <td className="detail_row-alignRight">48元</td>
-            </tr>
+            {products.map((item, index) => {
+              return (
+                <tr key={index} className="detail_row">
+                  <td>{item.name}</td>
+                  <td className="detail_row-alignRight">{item.quantity}</td>
+                  <td className="detail_row-alignRight">{item.price}</td>
+                </tr>
+              );
+            })}
             <tr>
               <td></td>
               <td className="detail_td-price">
@@ -29,14 +36,14 @@ class Detail extends Component {
                 <strong className="detail_td-priceNew">团购价</strong>
               </td>
               <td className="detail_td-price">
-                48元
+                {oldPrice}元
                 <br />
-                <strong className="detail_td-priceNew">19.9元</strong>
+                <strong className="detail_td-priceNew">{currentPrice}元</strong>
               </td>
             </tr>
           </tbody>
         </table>
-        <div className="detail_remark">免费提供餐巾纸</div>
+        <div className="detail_remark">{remark}</div>
         <div className="detail_more">
           <span>更多图文详情</span>
           <span className="detail_notice">
