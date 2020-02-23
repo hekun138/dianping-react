@@ -11,7 +11,7 @@ class ProductOverview extends Component {
       description,
       currentPrice,
       oldPrice
-    } = this.props;
+    } = this.props.data;
     return (
       <div className="productOverview">
         <div className="productOverview_header">

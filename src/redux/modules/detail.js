@@ -3,7 +3,7 @@ import url from "../../utils/url";
 import { FETCH_DATA } from "../middleware/api";
 import { schema as shopSchema, getShopById } from "./entities/shops";
 import {
-  schema as productSchems,
+  schema as productSchema,
   getProductDetail,
   getProductById
 } from "./entities/products";
@@ -63,7 +63,7 @@ const fetchProductDetail = (endpoint, id) => ({
       types.FETCH_PRODUCT_DETAIL_REQUEST
     ],
     endpoint,
-    schema: shopSchema
+    schema: productSchema
   },
   id
 });
@@ -81,7 +81,7 @@ const fetchShopById = (endpoint, id) => ({
       types.FETCH_SHOP_FAILURE
     ],
     endpoint,
-    schema: productSchems
+    schema: shopSchema
   },
   id
 });
